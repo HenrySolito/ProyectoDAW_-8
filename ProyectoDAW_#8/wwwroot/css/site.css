@@ -16,3 +16,17 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.centrar
+{
+    align-content:center;
+    margin-right : 650px;
+}
+
+.espaciado{
+    margin-right: 12px;
+}
+
+.margenIzquierdo{
+    margin-left : 100px;
+}

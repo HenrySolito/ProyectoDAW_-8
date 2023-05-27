@@ -2,7 +2,101 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg bg-black">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul>
+              <li class="nav-item al">
+                <button type="button" class="btn btn-outline-primary text-white">Empleos</button>
+              </li>
+          </ul>
+        <ul>
+            <li class="nav-item">
+                <button type="button" class="btn btn-outline-primary text-white">Para Empresas</button>
+            </li>
+        </ul>
+        
+        <ul>
+             <li class="nav-item">
+            <button type="button" class="btn btn-outline-primary text-white">Info. de Contacto</button>
+        </li>
+        </ul>
+       
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-primary text-white" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+</div>
+
+<div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="~/css/images source/enterprise-1024x625.jpg" class="d-block w-100 h-80" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="~/css/images source/enterprise-1024x625.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="~/css/images source/enterprise-1024x625.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+    </div>
+</div>
+
+<div class="justify-content-evenly d-inline-flex m-5">
+   
+    <div class="rounded float-start">
+         <h4>Enterprise</h4>
+         <img src="~/css/images source/management-of-companies-and-enterprises-facebook.jpg" class=" w-50" alt="">
+    </div>
+    <div class="rounded mx-auto d-block">
+         <h4>Enterprise</h4>
+         <img src="~/css/images source/management-of-companies-and-enterprises-facebook.jpg" class=" w-50" alt="...">
+        
+    </div>
+    <div class="rounded float-end">
+        <h4>Enterprise</h4>
+        <img src="~/css/images source/management-of-companies-and-enterprises-facebook.jpg" class=" w-50" alt="...">
+    </div>
+    
+</div>
+
+<div>
+    <h2 class="text-center">
+        Experiencias
+    </h2>
+    <div>
+        <div class="card text-center">
+  <div class="card-header">
+    Find Worker
+  </div>
+  <div class="card-body">
+    <h2 class="card-title">Nombre Puesto</h2>
+    <h4 class="card-text">With supporting text below as a natural lead-in to additional content.</h4>
+  </div>
+  <div class="card-footer text-muted">
+    Real Experiences
+  </div>
+</div>
+    </div>
 </div>
