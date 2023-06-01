@@ -14,13 +14,14 @@ namespace ProyectoDAW__8.Controllers
         }
         public IActionResult Index()
         {
-            var OrfetaGeneral = (from m in _empleosContext.ofertas
+            var OfertaGeneral = (from m in _empleosContext.ofertas
                                 select new {
                                     id_ofertas = m.id_ofertas,
                                     nombrePuesto = m.nombrePuesto,
                                     descripcionOferta = m.descripcionOferta,
                                     salario = m.salario,
                                 }).ToList();
+            ViewData["listaOfertas"] = OfertaGeneral;
 
             return View();
         }

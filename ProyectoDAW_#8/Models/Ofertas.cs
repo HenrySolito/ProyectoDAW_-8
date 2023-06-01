@@ -11,7 +11,7 @@ namespace ProyectoDAW__8.Models
 
         public string descripcionOferta { get; set; }
 
-        public float salario { get; set; }
+        public string salario { get; set; }
 
         public string? imagenPuesto { get; set; }
 

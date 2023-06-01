@@ -36,19 +36,22 @@
 </div>
     
  <div>
-    <div class="card w-100 mt-3">
-      <h5 class="card-title ">Titulo:</h5>
-       <div class="text-end align-items-end">
-          <h5 class="card-title">Salario:</h5>
-          <h5 class="text-success card-text">$100</h5>
-          <a href="#" class="btn btn-primary text-end align-content-end">Button</a>
-        </div>
-      <div class="card-body d-block">       
-        <p class="card-text"></p>
-        <p class="card-text border border-primary rounded bg-secondary text-white">With supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-    
+    @foreach (var ofertas in (IEnumerable<dynamic>)ViewData["listaOfertas"])
+            {
+                <div class="card w-100 mt-3">
+                    <h5 class="card-title ">Titulo: @ofertas.nombrePuesto</h5>
+                <div class="text-end align-items-end me-2">
+                    <h5 class="card-title">Salario:</h5>
+                    <h5 class="text-success card-text" ID ="@ofertas.id_ofertas">$@ofertas.salario</h5>
+                    <a href="#" class="btn btn-primary text-end align-content-end">Aplicar</a>
+                </div>
+                <div class="card-body d-block">       
+                    <p class="card-text"></p>
+                    <p class="card-text border border-primary rounded bg-secondary text-white">@ofertas.descripcionOferta</p>
+                </div>
+                </div>
+            }
+
   </div>
 
 
