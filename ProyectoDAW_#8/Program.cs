@@ -12,7 +12,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddDbContext<empleosContext>(options =>
                                                 options.UseSqlServer(
-                                                    builder.Configuration.GetConnectionString("empleosDbConmection")
+                                                    builder.Configuration.GetConnectionString("empleosDbConnection")
                                                     )
                                                 );
 

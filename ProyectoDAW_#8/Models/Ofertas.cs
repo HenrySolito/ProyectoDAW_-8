@@ -7,7 +7,7 @@ namespace ProyectoDAW__8.Models
         [Key]
         public int id_ofertas { get; set; }
 
-        public string nombreOferta { get; set; }
+        public string nombrePuesto { get; set; }
 
         public string descripcionOferta { get; set; }
 
