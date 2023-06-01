@@ -25,5 +25,9 @@ namespace ProyectoDAW__8.Controllers
 
             return View();
         }
+        public IActionResult detalleW()
+        {
+            return View();
+        }
     }
 }
