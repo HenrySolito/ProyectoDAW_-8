@@ -27,6 +27,11 @@ body {
     margin-right: 12px;
 }
 
-.margenIzquierdo{
-    margin-left : 100px;
+.margenIzquierdo {
+    margin-left: 100px;
+}
+.carousel-container {
+    width: 500px; /* Ajusta el ancho según tus preferencias */
+    height: 300px; /* Ajusta la altura según tus preferencias */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
 }
