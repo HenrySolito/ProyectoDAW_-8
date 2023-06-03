@@ -63,22 +63,41 @@
     </div>
 </div>
 
-<div class="justify-content-evenly d-inline-flex m-5">
-   
-    <div class="rounded float-start">
-         <h4>Enterprise</h4>
-         <img src="~/css/images source/management-of-companies-and-enterprises-facebook.jpg" class=" w-50" alt="">
-    </div>
-    <div class="rounded mx-auto d-block">
-         <h4>Enterprise</h4>
-         <img src="~/css/images source/management-of-companies-and-enterprises-facebook.jpg" class=" w-50" alt="...">
-        
-    </div>
-    <div class="rounded float-end">
+<div class="carousel-container">
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicadores -->
+    <ol class="carousel-indicators">
+      <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+    </ol>
+    
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
         <h4>Enterprise</h4>
-        <img src="~/css/images source/management-of-companies-and-enterprises-facebook.jpg" class=" w-50" alt="...">
+        <img src="~/css/images source/management-of-companies-and-enterprises-facebook.jpg" class="w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <h4>Enterprise</h4>
+        <img src="~/css/images source/management-of-companies-and-enterprises-facebook.jpg" class="w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <h4>Enterprise</h4>
+        <img src="~/css/images source/management-of-companies-and-enterprises-facebook.jpg" class="w-100" alt="...">
+      </div>
     </div>
     
+    <!-- Controles de navegación -->
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </a>
+  </div>
 </div>
 
 <div>
