@@ -1,61 +1,75 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Ofertas";
+    var listaOfertas = ViewData["listaOfertas"] as List<Ofertas>;
+}
+
 <form>
-       
     <div class="navbar-expand-lg">
         <nav class="navbar navbar-expand-lg bg-black">
-    <div class="container-fluid">
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <ul>
-                 <li class="nav-item al">
-                    <a type="button" class="btn btn-outline-primary text-white" asp-controller="ofertas" asp-action="Index">Empleos</a>
-                </li>
-                </ul>
-                <ul>
-                <li class="nav-item">
-                    <a type="button" class="btn btn-outline-primary text-white "asp-controller="ofertas" asp-action="detalleEmpleo">Para Empresas</a>
-                </li>
-                </ul>
-                <ul>
-                <li class="nav-item">
-                <a type="button" class="btn btn-outline-primary text-white">Info. de Contacto</a>
-                </li>
-                </ul>
-       
-            </ul>
-      <div class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-primary text-white" type="submit">Search</button>
-      </div>
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item al">
+                            <a type="button" class="btn btn-outline-primary text-white" asp-controller="ofertas" asp-action="Index">Empleos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a type="button" class="btn btn-outline-primary text-white" asp-controller="ofertas" asp-action="detalleEmpleo">Para Empresas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a type="button" class="btn btn-outline-primary text-white">Info. de Contacto</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-primary text-white" type="submit">Search</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </div>
-  </div>
-</nav>
-</div>
-    
- <div>
-    @foreach (var ofertas in (IEnumerable<dynamic>)ViewData["listaOfertas"])
-            {
-                <div class="card w-100 mt-3">
-                    <h5 class="card-title ">Titulo: @ofertas.nombrePuesto</h5>
+
+    <div>
+        @foreach (var oferta in listaOfertas)
+        {
+            <div class="card w-100 mt-3">
+                <h5 class="card-title">Titulo: @oferta.nombrePuesto</h5>
                 <div class="text-end align-items-end me-2">
                     <h5 class="card-title">Salario:</h5>
-                    <h5 class="text-success card-text" ID ="@ofertas.id_ofertas">$@ofertas.salario</h5>
+                    <h5 class="text-success card-text" ID="@oferta.id_ofertas">$@oferta.salario</h5>
                     <a href="#" class="btn btn-primary text-end align-content-end">Aplicar</a>
                 </div>
-                <div class="card-body d-block">       
+                <div class="card-body d-block">
                     <p class="card-text"></p>
-                    <p class="card-text border border-primary rounded bg-secondary text-white">@ofertas.descripcionOferta</p>
+                    <p class="card-text border border-primary rounded bg-secondary text-white">@oferta.descripcionOferta</p>
                 </div>
-                </div>
-            }
+            </div>
+        }
+    </div>
 
-  </div>
-
-
-
-        
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                @foreach (var oferta in listaOfertas)
+                {
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                            <div class="card-body">
+                                <h5 class="card-title">@oferta.nombrePuesto</h5>
+                                <p class="card-text">@oferta.descripcionOferta</p>
+                                <p class="card-text">Salario: @oferta.salario</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="/ofertas/GetID/@oferta.id_ofertas" class="btn btn-sm btn-outline-secondary">Ver</a>
+                                        <a href="/ofertas/GetID/@oferta.id_ofertas" class="btn btn-sm btn-outline-secondary">Editar</a>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
 </form>
-}
