@@ -25,6 +25,17 @@ namespace ProyectoDAW__8.Controllers
 
             return View();
         }
+
+        public IActionResult GetID(int id) //agregado de ID 
+        {
+            var OfertaGeneral = (from m in _empleosContext.ofertas
+                                 where m.id_ofertas == id
+                                 select m).FirstOrDefault();
+                                
+            ViewData["listaOfertas"] = OfertaGeneral;
+
+            return View();
+        }
         public IActionResult detalleW()
         {
             return View();
