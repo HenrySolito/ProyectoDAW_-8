@@ -33,8 +33,17 @@ namespace ProyectoDAW__8.Controllers
         public IActionResult GetID(int id) //agregado de ID 
         {
             var OfertaGeneral = (from m in _empleosContext.ofertas
+                                 join e in _empleosContext.empresas on m.id_empresa equals e.id_empresa
                                  where m.id_ofertas == id
-                                 select m).FirstOrDefault();
+                                 select new
+                                 {
+                                     nombre = m.nombrePuesto,
+                                     descripcion = m.descripcionOferta,
+                                     nombreEmpresa = e.nombreEmpresa,
+                                     DescripcionEmpresa = e.descripcionEmpresa,
+                                     ubicacion = e.ubicacion
+
+                                 }).ToList();
                                 
             ViewData["listaOfertas"] = OfertaGeneral;
 
