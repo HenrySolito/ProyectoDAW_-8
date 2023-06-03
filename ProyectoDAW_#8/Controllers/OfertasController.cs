@@ -37,11 +37,6 @@ namespace ProyectoDAW__8.Controllers
                                  select m).FirstOrDefault();
                                 
             ViewData["listaOfertas"] = OfertaGeneral;
-
-            return View();
-        }
-        public IActionResult detalleW()
-        {
             return View();
         }
     }
