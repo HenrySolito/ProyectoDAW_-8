@@ -2,76 +2,62 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    <div style="margin-bottom: 5%;" class="text-center">
-    <h2> /Nombre del Puesto </h2>
+    <div style="margin-bottom: 5%;" class="text-center n2">
+    <p class="h3">Nombre de puesto</p>
     </div>
     
-    <div class="n2">
-    <div class="container" style="display: flex;">
-  <table style="border-spacing: 200px;">
-    <thead>
-      <tr>
-        <th>
-          <h1>Descripcion detallada del empleo</h1>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Dato 1</td>
-      </tr>
-    </tbody>
-  </table>
-  <table style="">
-    <thead>
-      <tr>
-        <th>
-          <img src="~/imagenes/img1.png" alt="Descripción de la imagen" width="30%" height="auto">
-          
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <a href="#" class="btn btn-primary text-end align-content-end">Aplicar</a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<div class="table2" style="display: flex";>
-    <table style="border-spacing: 200px;">
-    <thead>
-      <tr>
-        <th>
-          <h1>Nombre<br>de empresa</h1>
-          <h1>Descripcion<br>de la empresa</h1>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Dato 1</td>
-      </tr>
-    </tbody>
-  </table>
-  <table>
-    <thead>
-      <tr>
-        <th>
-          <img src="~/imagenes/img1.png" alt="Descripción de la imagen" width="30%" height="auto">
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+    <div class="container text-center my-5">
+  <div class="row align-items-start">
+    <div class="col-md-6">
+      <div class="row g-0">
+        <div class="col border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <h3 class="mb-0">Descripción del puesto</h3>
+            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="col-md-6">
+      <img src="~/imagenes/img1.png" class="rounded float-end mt-2" alt="Descripción de la imagen" width="50%" height="auto">
+    </div>
+    <div class="d-md-flex justify-content-md-end my-5">
+      <a href="#" class="btn btn-primary text-end align-content-end padding-top ">Aplicar</a>
+    </div>
+  </div>
+</div>
+
+<div style="margin-bottom: 5%;" class="text-center n2">
+    <p class="h3">Nombre de la empresa</p>
+</div>
+<div class="container text-center my-5">
+  <div class="row align-items-start">
+    <div class="col-md-6">
+      <div class="row g-0">
+        <div class="col border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <h3 class="mb-0">Descripción de la empresa</h3>
+            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img src="~/imagenes/img1.png" class="rounded float-end mt-2" alt="Descripción de la imagen" width="50%" height="auto">
+    </div>
+  </div>
+</div>
+ 
+
+<div class="mb-3">
+<p class="h3">Comentarios y reseñas</p>
+</div>
+<div class="mb-3">
+  <label for="comentarioOferta" class="form-label">Agregar comentario</label>
+  <textarea class="form-control" id="comentarioOferta" rows="3"></textarea>
+</div>
+<div class="d-md-flex justify-content-md-end my-3">
+      <a href="#" class="btn btn-primary text-end align-content-end padding-top ">Comentar</a>
+</div>
 
 }
