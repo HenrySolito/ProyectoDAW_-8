@@ -2,11 +2,11 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-   <form>
+   <form asp-action="detalleW">
         @foreach(var ofertas in (IEnumerable<dynamic>)ViewData["detallesOferta"])
         {
             <div style="margin-bottom: 5%;" class="text-center n2">
-    <p class="h3">Nombre de puesto</p>
+    <p class="h3">@ofertas.nombrePuesto</p>
     </div>
     
     <div class="container text-center my-5">
@@ -16,7 +16,7 @@
         <div class="col border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
           <div class="col p-4 d-flex flex-column position-static">
             <h3 class="mb-0">Descripción del puesto</h3>
-            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text mb-auto">@ofertas.descripcionEmpleo</p>
           </div>
         </div>
       </div>
@@ -31,7 +31,7 @@
 </div>
 
 <div style="margin-bottom: 5%;" class="text-center n2">
-    <p class="h3">Nombre de la empresa</p>
+    <p class="h3">@ofertas.nombreEmpresa</p>
 </div>
 <div class="container text-center my-5">
   <div class="row align-items-start">
@@ -40,7 +40,8 @@
         <div class="col border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
           <div class="col p-4 d-flex flex-column position-static">
             <h3 class="mb-0">Descripción de la empresa</h3>
-            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text mb-auto">@ofertas.descripcionEmpresa</p>
+            <h6>@ofertas.ubicacion</h6>
           </div>
         </div>
       </div>
