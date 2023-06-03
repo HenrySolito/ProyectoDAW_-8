@@ -32,16 +32,16 @@ namespace ProyectoDAW__8.Controllers
 
         public IActionResult GetID(int id) //agregado de ID 
         {
-            var OfertaGeneral = (from m in _empleosContext.ofertas
+            var OfertaDetallada = (from m in _empleosContext.ofertas where id == m.id_ofertas
                                  select new
                                  {
                                      id_ofertas = m.id_ofertas,
                                      nombrePuesto = m.nombrePuesto,
-                                     descripcionOferta = m.descripcionOferta,
+                                     descripcionEmpleo = m.descripcionEmpleo,
                                      salario = m.salario,
                                  }).ToList();
 
-            ViewData["listaOfertas"] = OfertaGeneral;
+            ViewData["detallesOferta"] = OfertaDetallada;
             return View();
         }
     }

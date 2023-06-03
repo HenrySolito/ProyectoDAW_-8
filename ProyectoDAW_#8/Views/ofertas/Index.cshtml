@@ -43,7 +43,7 @@
                 <div class="text-end align-items-end me-2">
                     <h5 class="card-title">Salario:</h5>
                     <h5 class="text-success card-text" ID ="@ofertas.id_ofertas">$@ofertas.salario</h5>
-                    @Html.ActionLink("Guardar", "Agregar", new { id = ofertas.id_ofertas})
+                    @Html.ActionLink("Aplicar", "detalleW","OfertasController", new { id = ofertas.id_ofertas})
                 </div>
                 <div class="card-body d-block">       
                     <p class="card-text"></p>
